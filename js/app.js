@@ -2,37 +2,62 @@
 
 var dailyHours = ['6am', '7am', '8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
 
-function Store(min, max, averageCookieSale, locationName, customersPerHour, cookiesPerHour, totalCookieSale){
-  
+function Store(min, max, averageCookieSale, locationName){
+  this.min = min;
+  this.max = max;
+  this.averageCookieSale = averageCookieSale;
+  this.locationName = locationName;
+  this.customersPerHour = [];
+  this.cookiesPerHour = [];
+  this.totalCookiesSales = 0;
 }
+var location1 = new Store(23,64,3.14,'Pike Place Market');
+var location2 = new Store(3,24,1.2,'SeaTac Airport');
+var location3 = new Store(11,38,3.7,'Seattle Center');
+var location4 = new Store(20,38,3.3,'Capitol Hill');
+var location5 = new Store(2,16,4.6,'Alki');
 
-
-var location1 = {
-  min:23,
-  max:44,
-  avergeCookiePerCustomer:3.14,
-  locationName:'Pike Place Market',
-  customersPerHour: [],
-  cookiesPerHour: [],
-  totalCookiesSales: 0
-};
 //random number function reference from MDN Math.random docs.
-function randomNumber(location1){
+Store.prototype.randomNumber = function(){
   for(var i=0; i<dailyHours.length; i++){
-    location1.customersPerHour[i] = Math.floor(Math.random()*(location1.max-location1.min+1))+location1.min;
-    console.log(location1.customersPerHour);
+    this.customersPerHour[i] = Math.floor(Math.random()*(this.max-this.min+1))+this.min;
+    console.log(this.customersPerHour);
   }
-}
+};
 
-function cookiesEachHour(location1){
+//total cookies sales which is random customer * average cookies sales 
+Store.prototype.cookiesEachHour = function(){
+  var total = 0;
   for(var i = 0; i<dailyHours.length; i++){
-    location1.cookiesPerHour[i] = Math.ceil(location1.customersPerHour[i] * location1.avergeCookiePerCustomer);
-    console.log(location1.cookiesPerHour[i]);
-    location1.totalCookiesSales += location1.cookiesPerHour[i];
+    this.cookiesPerHour[i] = Math.ceil(this.customersPerHour[i] * this.averageCookieSale);
+    console.log(this.cookiesPerHour[i]);
+    total += this.cookiesPerHour[i];
   }
-}
-randomNumber(location1);
-cookiesEachHour(location1);
+  this.totalCookiesSales = total;
+  console.log(total);
+};
+
+//For location 1
+location1.randomNumber(location1);
+location1.cookiesEachHour();
+
+//For location 2
+location2.randomNumber(location1);
+location2.cookiesEachHour();
+
+//For location 3
+location3.randomNumber(location1);
+location3.cookiesEachHour();
+
+//For location 4
+location4.randomNumber(location1);
+location4.cookiesEachHour();
+
+//For location 5
+location5.randomNumber(location1);
+location5.cookiesEachHour();
+
+
 
 /* OLD WAY
 //1st and Pike
