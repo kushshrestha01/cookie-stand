@@ -2,6 +2,39 @@
 
 var dailyHours = ['6am', '7am', '8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
 
+function Store(min, max, averageCookieSale, locationName, customersPerHour, cookiesPerHour, totalCookieSale){
+  
+}
+
+
+var location1 = {
+  min:23,
+  max:44,
+  avergeCookiePerCustomer:3.14,
+  locationName:'Pike Place Market',
+  customersPerHour: [],
+  cookiesPerHour: [],
+  totalCookiesSales: 0
+};
+//random number function reference from MDN Math.random docs.
+function randomNumber(location1){
+  for(var i=0; i<dailyHours.length; i++){
+    location1.customersPerHour[i] = Math.floor(Math.random()*(location1.max-location1.min+1))+location1.min;
+    console.log(location1.customersPerHour);
+  }
+}
+
+function cookiesEachHour(location1){
+  for(var i = 0; i<dailyHours.length; i++){
+    location1.cookiesPerHour[i] = Math.ceil(location1.customersPerHour[i] * location1.avergeCookiePerCustomer);
+    console.log(location1.cookiesPerHour[i]);
+    location1.totalCookiesSales += location1.cookiesPerHour[i];
+  }
+}
+randomNumber(location1);
+cookiesEachHour(location1);
+
+/* OLD WAY
 //1st and Pike
 var location1 = {
   min: 24,
@@ -160,3 +193,4 @@ document.getElementById('location5Sum').innerHTML = totalSum5;
 // var d = new Date();
 // console.log('date '+ d);
 // document.getElementById('date').innerHTML = d;
+*/
