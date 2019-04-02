@@ -50,11 +50,11 @@ var location2 = {
   },
 };
 location2.randomtotalsale();
-var ulEl = document.getElementById('store2');
+ulEl = document.getElementById('store2');
 var totalSum2 = 0;
-for (var i = 0; i <15; i++) {
+for (i = 0; i <15; i++) {
   // create a <li> element
-  var liEl = document.createElement('li');
+  liEl = document.createElement('li');
   var roundedNumber2 = Math.round(location2.totalCookieSale[i]);
   // give it content
   liEl.textContent = dailyHours[i] + ' : ' + roundedNumber2;
@@ -80,11 +80,11 @@ var location3 = {
   },
 };
 location3.randomtotalsale();
-var ulEl = document.getElementById('store3');
+ulEl = document.getElementById('store3');
 var totalSum3 = 0;
-for (var i = 0; i <15; i++) {
+for (i = 0; i <15; i++) {
   // create a <li> element
-  var liEl = document.createElement('li');
+  liEl = document.createElement('li');
   var roundedNumber3 = Math.round(location3.totalCookieSale[i]);
   // give it content
   liEl.textContent = dailyHours[i] + ' : ' + roundedNumber3;
@@ -110,11 +110,11 @@ var location4 = {
   },
 };
 location4.randomtotalsale();
-var ulEl = document.getElementById('store4');
+ulEl = document.getElementById('store4');
 var totalSum4 = 0;
-for (var i = 0; i <15; i++) {
+for (i = 0; i <15; i++) {
   // create a <li> element
-  var liEl = document.createElement('li');
+  liEl = document.createElement('li');
   var roundedNumber4 = Math.round(location4.totalCookieSale[i]);
   // give it content
   liEl.textContent = dailyHours[i] + ' : ' + roundedNumber4;
@@ -141,11 +141,11 @@ var location5 = {
   },
 };
 location5.randomtotalsale();
-var ulEl = document.getElementById('store5');
+ulEl = document.getElementById('store5');
 var totalSum5 = 0;
-for (var i = 0; i <15; i++) {
+for (i = 0; i <15; i++) {
   // create a <li> element
-  var liEl = document.createElement('li');
+  liEl = document.createElement('li');
   var roundedNumber5 = Math.round(location5.totalCookieSale[i]);
   // give it content
   liEl.textContent = dailyHours[i] + ' : ' + roundedNumber5;
@@ -157,6 +157,6 @@ for (var i = 0; i <15; i++) {
 document.getElementById('location5Sum').innerHTML = totalSum5;
 
 //Current Date
-//var d = new Date();
-//console.log('date '+ d);
-//document.getElementById('date').innerHTML = d;
+// var d = new Date();
+// console.log('date '+ d);
+// document.getElementById('date').innerHTML = d;
