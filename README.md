@@ -15,4 +15,4 @@ https://codepen.io/samhamm/pen/RONMgZ?editors=0011
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 
 04/02//19
-made a new brach to monday-resubmit update Monday work for resubmission
+made a new brach monday-resubmit to update Monday work for resubmission
