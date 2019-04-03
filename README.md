@@ -24,6 +24,9 @@ Sam's guide code from class.
 - https://github.com/codefellows/seattle-201d56/blob/master/class-07/demo-tables/app.js
 -https://github.com/codefellows/seattle-201d56/blob/master/class-07/demo-tables/app.js
 
+04/03/19
+- Daily Location Total added in Tuesday assignment
+
 
 
 
