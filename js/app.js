@@ -78,6 +78,9 @@ function headingForTime(){
     thEl.textContent = dailyHours[i];
     trEl.appendChild(thEl);
   }
+  thEl = document.createElement('th');
+  thEl.textContent = 'Daily Location Total';
+  trEl.appendChild(thEl);
   table.appendChild(trEl);
   body.appendChild(table);
 }
