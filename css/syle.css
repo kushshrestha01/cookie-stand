@@ -10,3 +10,7 @@ a {
 h2 {
   bottom: 0;
 }
+
+table, th, td {
+  border: 1px solid black;
+}
