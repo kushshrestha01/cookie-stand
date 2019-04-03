@@ -26,6 +26,8 @@ Sam's guide code from class.
 
 04/03/19
 - Daily Location Total added in Tuesday assignment
+- Tuesday assignment completed for re-submission
+
 
 
 
