@@ -27,6 +27,12 @@ Sam's guide code from class.
 04/03/19
 - Daily Location Total added in Tuesday assignment
 - Tuesday assignment completed for re-submission
+- Wednesday assignment completed
+
+references:
+Sam's guide code from class.
+-https://github.com/codefellows/seattle-201d56/blob/master/class-08/demo-forms/index.html
+-https://github.com/codefellows/seattle-201d56/blob/master/class-08/demo-forms/chat.js
 
 
 
