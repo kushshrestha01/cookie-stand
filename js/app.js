@@ -46,23 +46,23 @@ Store.prototype.cookiesEachHour = function(){
 };
 
 //For location 1 random number and cookies each hour
-location1.randomNumber(location1);
+location1.randomNumber();
 location1.cookiesEachHour();
 
 //For location 2 random number and cookies each hour
-location2.randomNumber(location2);
+location2.randomNumber();
 location2.cookiesEachHour();
 
 //For location 3 random number and cookies each hour
-location3.randomNumber(location3);
+location3.randomNumber();
 location3.cookiesEachHour();
 
 //For location 4 random number and cookies each hour
-location4.randomNumber(location4);
+location4.randomNumber();
 location4.cookiesEachHour();
 
 //For location 5 random number and cookies each hour
-location5.randomNumber(location5);
+location5.randomNumber();
 location5.cookiesEachHour();
 
 //fill the heading
@@ -144,14 +144,10 @@ function handleCommentSubmit(event) {
   event.preventDefault();
   console.log('event listner working');
   //get the input values
-  var minimumCustomerInput = parseInt(document.getElementById('min-customer').value);
-  var maximumCustomerInput = parseInt(document.getElementById('max-customer').value);
-  var averageCustomerInput = parseInt(document.getElementById('average-customer').value);
-  var nameCustomerInput = document.getElementById('new-location').value;
-  // console.log('this is the value ' + minimumCustomerInput);
-  // console.log('this is the value ' + maximumCustomerInput);
-  // console.log('this is the value ' + averageCustomerInput);
-  // console.log('this is the value ' + nameCustomerInput);
+  var minimumCustomerInput = parseInt(event.target.mincustomer.value);
+  var maximumCustomerInput = parseInt(event.target.maxcustomer.value);
+  var averageCustomerInput = parseInt(event.target.averagecustomer.value);
+  var nameCustomerInput = event.target.newlocation.value;
 
   //push it in a constructor function
   var location6 = new Store(minimumCustomerInput, maximumCustomerInput, averageCustomerInput,nameCustomerInput);
@@ -170,4 +166,8 @@ function handleCommentSubmit(event) {
   headingForTime();
   populateCookiesPerHour();
   allTotals();
+  event.target.mincustomer.value =null;
+  event.target.maxcustomer.value =null;
+  event.target.averagecustomer.value =null;
+  event.target.newlocation.value =null;
 }

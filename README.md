@@ -15,7 +15,7 @@ https://codepen.io/samhamm/pen/RONMgZ?editors=0011
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 
 04/02//19
-- made a new brach monday-resubmit to update Monday work for resubmission
+- made a new brach Monday-resubmit to update Monday work for resubmission
 - created new branch Tuesday-work for the Tuesday assignment. 
 - assignment completed
 
@@ -34,6 +34,9 @@ Sam's guide code from class.
 -https://github.com/codefellows/seattle-201d56/blob/master/class-08/demo-forms/index.html
 -https://github.com/codefellows/seattle-201d56/blob/master/class-08/demo-forms/chat.js
 
+04/04/20
+-added all the images
+-updated the way input values are pulled in event by taking off '-' from the file names in HTML
 
 
 
