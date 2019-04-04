@@ -24,7 +24,6 @@ locationArray.push(location3);
 locationArray.push(location4);
 locationArray.push(location5);
 
-var storeArray = [location1.locationName,location2.locationName,location3.locationName,location4.locationName,location5.locationName,];
 //console.log('here is from array ' + storeArray[1]);
 
 //random number function reference from MDN Math.random docs.
@@ -34,7 +33,6 @@ Store.prototype.randomNumber = function(){
     //console.log(this.customersPerHour);
   }
 };
-
 //total cookies sales which is random customer * average cookies.
 Store.prototype.cookiesEachHour = function(){
   var total = 0;
@@ -89,10 +87,10 @@ headingForTime();
 
 // fill the table with locations and cookies per hour value
 function populateCookiesPerHour(){
-  for(var j=0; j<5; j++){
+  for(var j=0; j<locationArray.length; j++){
     var trEl = document.createElement('tr');
     var thEl = document.createElement('th');
-    thEl.textContent = storeArray[j];
+    thEl.textContent = locationArray[j].locationName;
     //console.log(thEl.textContent);
     trEl.appendChild(thEl);
     table.appendChild(trEl);
@@ -121,7 +119,7 @@ function allTotals(){
   var dailyTotal = 0;
   for(var j=0; j<dailyHours.length; j++){
     var total = 0;
-    for(var i=0; i<5; i++){
+    for(var i=0; i<locationArray.length; i++){
       tdEl.textContent = locationArray[i].cookiesPerHour[j];
       total =total + parseInt(tdEl.textContent);
       dailyTotal = dailyTotal + parseInt(tdEl.textContent);
@@ -138,9 +136,38 @@ function allTotals(){
 }
 allTotals();
 
+//Wednesday work
+var form1 = document.getElementById('new-store-form');
+form1.addEventListener('submit', handleCommentSubmit);
 
-// console.log('total cookie sale ' + locationArray[0].cookiesPerHour[0]);
-// console.log('total cookie sale ' + locationArray[1].cookiesPerHour[0]);
-// console.log('total cookie sale ' + locationArray[2].cookiesPerHour[0]);
-// console.log('total cookie sale ' + locationArray[3].cookiesPerHour[0]);
-// console.log('total cookie sale ' + locationArray[4].cookiesPerHour[0]);
+function handleCommentSubmit(event) {
+  event.preventDefault();
+  console.log('event listner working');
+  //get the input values
+  var minimumCustomerInput = parseInt(document.getElementById('min-customer').value);
+  var maximumCustomerInput = parseInt(document.getElementById('max-customer').value);
+  var averageCustomerInput = parseInt(document.getElementById('average-customer').value);
+  var nameCustomerInput = document.getElementById('new-location').value;
+  // console.log('this is the value ' + minimumCustomerInput);
+  // console.log('this is the value ' + maximumCustomerInput);
+  // console.log('this is the value ' + averageCustomerInput);
+  // console.log('this is the value ' + nameCustomerInput);
+
+  //push it in a constructor function
+  var location6 = new Store(minimumCustomerInput, maximumCustomerInput, averageCustomerInput,nameCustomerInput);
+  locationArray.push(location6);
+  // console.log(location6);
+
+  //add customer per hour cookies per hour and total cookies
+  location6.randomNumber(location6);
+  location6.cookiesEachHour();
+  console.log(location6);
+
+  //Remove the table
+  table.innerHTML = '';
+
+  //add it to the table
+  headingForTime();
+  populateCookiesPerHour();
+  allTotals();
+}
