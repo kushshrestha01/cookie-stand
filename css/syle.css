@@ -4,7 +4,7 @@ body {
 }
 
 a {
-  font-size: 50px
+  font-size: 25px
 }
 
 h2 {
@@ -15,7 +15,26 @@ table, th, td {
   border: 1px solid black;
 }
 
-img {
-  width: 200px;
-  float:right;
+footer{
+  bottom:0;
+  background-color: black;
+  color: white;
+  padding:20px;
+}
+
+#indexBody {
+  width: 960px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: black;
+  color: white;
+  width: 960px;
+  margin: 0 auto;
+  padding:12px;
+}
+
+li {
+  display: inline;
 }
