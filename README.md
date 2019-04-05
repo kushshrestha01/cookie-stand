@@ -38,6 +38,8 @@ Sam's guide code from class.
 -added all the images
 -updated the way input values are pulled in event by taking off '-' from the file names in HTML
 
+-all the images are added.
+-few update made as per assignment
 
 
 
