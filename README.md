@@ -34,12 +34,16 @@ Sam's guide code from class.
 -https://github.com/codefellows/seattle-201d56/blob/master/class-08/demo-forms/index.html
 -https://github.com/codefellows/seattle-201d56/blob/master/class-08/demo-forms/chat.js
 
-04/04/20
+04/04/19
 -added all the images
 -updated the way input values are pulled in event by taking off '-' from the file names in HTML
 
 -all the images are added.
 -few update made as per assignment
+
+04/04/19
+
+-Assignment completed
 
 
 
